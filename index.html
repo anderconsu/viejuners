@@ -12,6 +12,7 @@
     <h1>Viejuners</h1>
     <h2>El club viejuner</h2>
     <form action="POST">
+        <fieldset>
         <h3>Tú</h3>
         <label for="nombre">Nombre :</label>
             <input type="text" name="nombre" id="nombre">
@@ -35,7 +36,8 @@
         <div>
             <input type="submit" value="Enviar">
         </div>
-        </form>
+        </fieldset>
+    </form>
     <h2>Los ladronzuelos de bicicletas</h2>
     <form action="POST">
         <label for="dia">Día :</label>
@@ -46,34 +48,26 @@
             <input type="color" name="color-bicicleta" id="color-bicicleta">
         <label for="rango-precio">Rango de precio :</label>
             <input type="range" name="rango-precio" id="rango-precio" min="0" max="50000">
-        <label for="tipo-bicicleta"><h4>Tipo de bicicleta:</h4></label>
-            <ul>
-                <li>
-                <label for="tipo-bicicleta-paseo">De Paseo :</label>
-                <select name="tipo-bicicleta-paseo" id="tipo-bicicleta-paseo">
-                    <option value="senorial">Señorial</option>
-                    <option value="anti-plebeyos">Anti-plebeyos</option>
-                    <option value="porencimadelhombro">Por Encima Del Hombro</option>
-                </select>
-                </li>
-                <li>
-                <label for="tipo-bicicleta-montana">De Montaña</label>
-                <select name="tipo-bicicleta-montana" id="tipo-bicicleta-montana">
-                    <option value="gamusinos">Gamusinos</option>
-                    <option value="huelesflores">Huelesflores Premium</option>
-                    <option value="fangolover">Fango Lover</option>
-                </select>
-                </li>
-                <li>
-                <label for="tipo-bicicleta-carreras">De Carreras</label>
-                    <select name="tipo-bicicleta-carreras" id="tipo-bicicleta-carreras">
-                        <option value="metroymedio">Metroymedio</option>
-                        <option value="fluorescente">3 de la tarde. Fluorescente edition</option>
-                        <option value="grupitors">Grupitors</option>
-                    </select>    
-                </li>
-            </ul>
-        <label for="accesorios">Accesorios: </label>
+        <label for="tipo-bicicleta"><h4>Tipo de bicicleta:</h4></label>        
+            <select name="tipo-bicicleta" id="tipo-bicicleta">
+            <optgroup label="Bicicleta de paseo">
+                <option value="senorial">Señorial</option>
+                <option value="anti-plebeyos">Anti-plebeyos</option>
+                <option value="porencimadelhombro">Por Encima Del Hombro</option>
+            </optgroup>
+            <optgroup label="Bicicleta de montaña">
+                <option value="gamusinos">Gamusinos</option>
+                <option value="huelesflores">Huelesflores Premium</option>
+                <option value="fangolover">Fango Lover</option>
+            </optgroup>
+            <optgroup label="Bicicleta de carreras">
+                <option value="metroymedio">Metroymedio</option>
+                <option value="fluorescente">3 de la tarde. Fluorescente edition</option>
+                <option value="grupitors">Grupitors</option>
+            </optgroup>    
+            </select> 
+            <div>
+            <label for="accesorios">Accesorios: </label>
             <select name="accesorios" id="accesorios" multiple>
                 <option value="ruedines">Ruedines</option>
                 <option value="pegatinas">Pegatinas</option>
@@ -82,6 +76,7 @@
                 <option value="timbre">Timbre</option>
                 <option value="foco">Foco</option>
             </select>
+            </div>   
         <div>
         <label for="marca">¿Qué Marca era?</label>
         <input list="marca" name="marca">
